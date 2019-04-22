@@ -36,8 +36,8 @@ class S3(object):
 
     def connect(self):
         conn = boto3.client(service_name='s3',
-            aws_access_key_id=self.conf['id'],
-            aws_secret_access_key=self.conf['key'],
+            aws_access_key_id=self.conf['key'],
+            aws_secret_access_key=self.conf['id'],
             endpoint_url=self.conf['url'])
         return conn
 
